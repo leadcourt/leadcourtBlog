@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --primary-color: #F35114;
+  --primary-tr-color: #f34f146c;
+  --secondary-color: #503E9D;
+  --secondary-tr-color: #503E9D1A;
+}
+
+body {
+  height: 100vh;
+}
+
+.ql-editor{
+    font-size: 1.05rem;
+    /* color: white;     */
+}
+
+.post-content p{
+  margin-bottom: 0rem;
+}
+
+.post-content h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  /* margin: 1rem 0; */
+}
+
+.post-content h2{
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  margin: .5rem 0;
+}
+
+.post-content a{
+  color: rgb(73, 149, 199);
+  text-decoration: none;
+}
+
+.dark .post-content a{
+  color: rgb(143, 204, 245);
+}
+
+.post-content a:hover{
+  text-decoration: underline;
+}
+
+
+
+.gradient-bg {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+}
+
+
+
+
+.secondary-btn-red{
+  @apply text-white hover:bg-[#f34f14c2] w-full py-3 px-4 cursor-pointer font-medium rounded-md transition-colors duration-200;
+  background-color: var(--primary-color);
+  
+}
+
+
+
+/* Preloader */ 
+.preloader{
+  position:fixed;
+  left:0px; 
+  top:0px;
+  width:100%;
+  height:100%;
+  z-index:999999;
+  background-color:#ffffff;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-image:url("../images/preloader.svg");
+}
