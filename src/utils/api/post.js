@@ -1,5 +1,7 @@
 import axios from 'axios'
-import { baseUrl } from '../../apis/post'
+
+
+const baseUrl = import.meta.env.VITE_BE_URL
 
 const addPost = async (payload) => {
     return axios.post(`${baseUrl}/post/create`, payload)

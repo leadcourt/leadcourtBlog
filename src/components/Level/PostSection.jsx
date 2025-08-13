@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import PostContent from './PostContent';
 import Sidebar from './Sidebar';
-import { baseUrl } from "../../apis/post";
-
+ 
 import PreloaderItem from './PreloaderItem';
 import { useRecoilState } from 'recoil';
 import { postState } from '../../utils/atom/postAtom';
 import { getAllPost } from '../../utils/api/post';
+
+
+const baseUrl = import.meta.env.VITE_BE_URL
 
 const PostSection = () => {
   

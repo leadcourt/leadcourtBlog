@@ -8,13 +8,12 @@ import CommentForm from '../components/Level2/CommentForm';
 import { Link, useParams } from 'react-router-dom';
 import formatDate from '../utils/formatDate';
 import PreloaderItem from '../components/Level/PreloaderItem';
-import { baseUrl } from '../apis/post';
 import { getPostBySlug } from '../utils/api/post';
 
 // import RelatedPosts from '../components/Level/RelatedPosts';
 // import TopicsSection from '../components/Level/TopicsSection';
 // import SocialMediaLinks from '../components/Level/SocialMediaLinks';
-
+  
 const PostPage2 = () => {
   const commentListRef = useRef();
 

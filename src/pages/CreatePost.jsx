@@ -14,7 +14,8 @@ import "react-circular-progressbar/dist/styles.css";
 import { useNavigate } from "react-router-dom";
 import {addPost} from "../utils/api/post";
 import axios from "axios";
-import { baseUrl } from "../apis/post";
+ 
+const baseUrl = import.meta.env.VITE_BE_URL
 
 const CreatePost = () => {
   const [file, setFile] = useState(null);
