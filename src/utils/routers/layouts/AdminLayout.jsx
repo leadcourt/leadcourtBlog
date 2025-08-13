@@ -26,7 +26,7 @@ export default function AdminLayout() {
       <ScrollTop />
       {/* <ScrollToTop /> */}
       {/* {auth?.access && user.role.toLowerCase() === "admin" ? ( */}
-       {auth?.access && user?.id === "bvnFSyVpaARbrQ12GE698n2IBvE3" ? (
+       {auth?.access && user?.id === import.meta.env.VITE_ADMIN_ACCESS ? (
          <div className="">
           <HeaderMain />
             <Outlet />
