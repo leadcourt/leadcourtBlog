@@ -31,9 +31,12 @@ const CreatePost = () => {
   const [content, setContent] = useState('');
   const [category, setCategory] = useState('');
 
+  const [loadCreate, setLoadCreate] = useState(false)
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoadCreate(true)
     const formDataInfo = new FormData();
     formDataInfo.append('title', title);
     formDataInfo.append('content', content);
@@ -57,6 +60,8 @@ const CreatePost = () => {
       // console.error('Error creating post:', error);
       setPublishError("Something went wrong");
     }
+    setLoadCreate(false)
+
   }; 
   return (
     <div className="p-3 max-w-3xl mx-auto min-h-screen">
@@ -150,6 +155,9 @@ const CreatePost = () => {
 
         </textarea>
         <Button type="submit" gradientDuoTone="purpleToPink">
+          {loadCreate ? 
+          <i className="pi pi-spinner pi-spin"></i>
+          :''}
           Publish
         </Button>
         {publishError && (
