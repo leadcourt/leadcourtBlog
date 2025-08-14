@@ -154,12 +154,14 @@ const CreatePost = () => {
         >
 
         </textarea>
-        <Button type="submit" gradientDuoTone="purpleToPink">
           {loadCreate ? 
+          ''
+          :
+        <Button type="submit" gradientDuoTone="purpleToPink">
           <i className="pi pi-spinner pi-spin"></i>
-          :''}
           Publish
         </Button>
+          }
         {publishError && (
           <Alert color="failure" className="mt-5">
             {publishError}
