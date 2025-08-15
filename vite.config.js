@@ -13,5 +13,3 @@ export default defineConfig({
   },
   plugins: [react()],
 })
-
-    // https://vitejs.dev/config/
