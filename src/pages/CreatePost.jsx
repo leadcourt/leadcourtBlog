@@ -29,7 +29,7 @@ const CreatePost = () => {
 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [category, setCategory] = useState('');
+  // const [category, setCategory] = useState('');
 
   const [loadCreate, setLoadCreate] = useState(false)
 
@@ -40,7 +40,7 @@ const CreatePost = () => {
     const formDataInfo = new FormData();
     formDataInfo.append('title', title);
     formDataInfo.append('content', content);
-    formDataInfo.append('category', category);
+    // formDataInfo.append('category', category);
     formDataInfo.append('image', file);
 
     try {
@@ -80,7 +80,7 @@ const CreatePost = () => {
             }
             }
           />
-          <Select
+          {/* <Select
             onChange={(e) => {
               // setFormData({ ...formData, category: e.target.value })
               setCategory(e.target.value)
@@ -91,7 +91,7 @@ const CreatePost = () => {
             <option value="automobile">Automobile</option>
             <option value="history">History</option>
             <option value="science">Science</option>
-          </Select>
+          </Select> */}
         </div>
         <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-solid p-3">
           {/* <FileInput
@@ -155,7 +155,9 @@ const CreatePost = () => {
 
         </textarea>
           {loadCreate ? 
-          ''
+          <div className="text-center">
+            <i className="pi pi-spinner pi-spin"></i>
+          </div>
           :
         <Button type="submit" gradientDuoTone="purpleToPink">
           <i className="pi pi-spinner pi-spin"></i>

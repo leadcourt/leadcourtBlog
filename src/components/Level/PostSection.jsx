@@ -17,7 +17,6 @@ const PostSection = () => {
       // State to hold posts
       const [posts, setPosts] = useState([])
       const [loading, setLoading] = useState(false)
-      const [categories, setCategories] = useState([]);
       const [postAtom, setPostAtom] = useRecoilState(postState);
 
 
