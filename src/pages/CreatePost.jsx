@@ -156,7 +156,7 @@ const CreatePost = () => {
         </textarea>
           {loadCreate ? 
           <div className="text-center">
-            <i className="pi pi-spinner pi-spin"></i>
+            <i className="w-5 h-5 border-2 border-dotted border-gray-400 rounded-full pi pi-spin"></i>
           </div>
           :
         <Button type="submit" gradientDuoTone="purpleToPink">
