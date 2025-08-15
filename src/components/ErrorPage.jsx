@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouteError, Link, useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
@@ -10,6 +10,10 @@ const ErrorPage = () => {
     navigate(0); // React Router v6+ supports this to reload current route
   };
 
+  useEffect(()=>{
+    console.log(error);
+    
+  }, [])
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
       <h1 className="text-4xl font-bold text-red-500 mb-4">Oops!</h1>

@@ -35,7 +35,6 @@ const HeaderMain = () => {
             <div className="flex-shrink-0">
                         <img src={LogoImg} alt="Logo" className="h-10" />
               
-              {/* <img src="./logo.png" className="h-[50px] -mx-2 -mt-2" alt="Logo" /> */}
             </div>
           </Link>
 

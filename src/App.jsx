@@ -15,7 +15,7 @@ const App = () => {
     position="top-right"
     />
     <Interceptors />
-    <RouterProvider router={router} />
+    <RouterProvider router={router}  basename="/blog" />
   </RecoilRoot>
 
   );
