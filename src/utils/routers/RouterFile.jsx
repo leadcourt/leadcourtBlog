@@ -16,11 +16,11 @@ const RouterFile = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [ 
       {
-        path: "/",
+        index: true,
         element: <Home2 />,
       },
       {
-        path: "/post/:postSlug",
+        path: "post/:postSlug",
         element: <PostPage2 />,
       },
     ],
@@ -31,11 +31,11 @@ const RouterFile = createBrowserRouter([
     children: [
       
       {
-        path: "/create-post",
+        path: "create-post",
         element: <CreatePost />,
       },
       // {
-      //   path: "/update-post/:postId",
+      //   path: "update-post/:postId",
       //   element: <UpdatePost />,
       // },
     ],
@@ -45,7 +45,7 @@ const RouterFile = createBrowserRouter([
     element: <AuthLayout />,
     children: [
       {
-        path: "/sign-in",
+        path: "sign-in",
         element: <LoginTwo />,
       },
     ],
