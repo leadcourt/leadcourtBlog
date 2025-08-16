@@ -14,6 +14,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { useNavigate } from "react-router-dom";
 import {addPost} from "../utils/api/post";
 import axios from "axios";
+import PreloaderItem from "../components/Level/PreloaderItem";
  
 const baseUrl = import.meta.env.VITE_BE_URL
 
@@ -54,7 +55,7 @@ const CreatePost = () => {
 
       if (response?.status == 201) {
         setPublishError(null);
-        navigate(`/post/${data.slug}`);
+        navigate(`/post/${data?.slug}`);
       }
     } catch (error) {
       // console.error('Error creating post:', error);
@@ -65,6 +66,9 @@ const CreatePost = () => {
   }; 
   return (
     <div className="p-3 max-w-3xl mx-auto min-h-screen">
+            {loadCreate ?
+            <PreloaderItem /> : ''
+          }
       <h1 className="text-center text-3xl my-7 font-semibold">Create a post</h1>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-4 sm:flex-row justify-between">
@@ -154,16 +158,9 @@ const CreatePost = () => {
         >
 
         </textarea>
-          {loadCreate ? 
-          <div className="text-center">
-            <i className="w-5 h-5 border-2 border-dotted border-gray-400 rounded-full pi pi-spin"></i>
-          </div>
-          :
         <Button type="submit" gradientDuoTone="purpleToPink">
-          <i className="pi pi-spinner pi-spin"></i>
           Publish
         </Button>
-          }
         {publishError && (
           <Alert color="failure" className="mt-5">
             {publishError}
