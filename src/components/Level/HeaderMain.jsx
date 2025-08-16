@@ -21,7 +21,9 @@ const HeaderMain = () => {
     resetRefreshToken();
     resetUser();
     toast.success("Log out successful");
-    navigate("/");
+    // navigate("/");
+          navigate("/blog/", { replace: true }); 
+    
   };
 
   
@@ -31,7 +33,7 @@ const HeaderMain = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="max-h-[50px]">
+          <Link to="" className="max-h-[50px]">
             <div className="flex-shrink-0">
                         <img src={LogoImg} alt="Logo" className="h-10" />
               
@@ -45,7 +47,7 @@ const HeaderMain = () => {
             <Link to="/#pricing" className="text-gray-600 hover:text-primary-500">Pricing</Link>
             <Link to="/data-collection.html" className="text-gray-600 hover:text-primary-500">Our Data</Link> */}
             <Link to="http://leadcourt.com/" className="text-gray-600 hover:text-primary-500">Home</Link>
-            <Link to="/" className="text-gray-600 hover:text-primary-500">Blog</Link>
+            <Link to="" className="text-gray-600 hover:text-primary-500">Blog</Link>
             {/* <Link to="/contact.html" className="text-gray-600 hover:text-primary-500">Contact Us</Link> */}
             
             
@@ -108,7 +110,7 @@ const HeaderMain = () => {
                   Home
                 </Link>
                 <Link
-                  to="/"
+                  to=""
                   className="px-4 py-2 text-gray-600 hover:text-primary-500 rounded-lg hover:bg-primary-50 transition-colors"
                 >
                   Blog

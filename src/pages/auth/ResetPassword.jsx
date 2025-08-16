@@ -98,7 +98,7 @@ export default function ResetPassword() {
               page to login.
             </p>
 
-            <button onClick={() => navigate("/")} className="secondary-btn-red">
+            <button onClick={() => navigate("/blog/", { replace: true })} className="secondary-btn-red">
               Proceed
             </button>
           </div>
@@ -243,7 +243,7 @@ export default function ResetPassword() {
         <div className="text-center mt-3">
           <p className="text-gray-600">
             <Link
-              to="/auth/user-login"
+              to="auth/user-login"
               className="text-orange-500 hover:text-orange-600 text-sm"
             >
               Proceed to login Here..

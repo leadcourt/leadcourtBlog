@@ -79,4 +79,7 @@ body {
   background-position:center center;
   background-repeat:no-repeat;
   background-image:url("../images/preloader.svg");
+  /* background-image: url("/blog/images/preloader.svg"); */
+  /* background-image: url("../assets/preloader.svg"); */
+
 }

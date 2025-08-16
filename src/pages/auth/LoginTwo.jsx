@@ -45,7 +45,8 @@ const LoginTwo = () => {
         setRefreshToken(res.refresh);
         setUser(res.user);
 
-        navigate("/");
+          navigate("/blog/", { replace: true }); 
+        // navigate("/");
       } else {
         toast.error(res.error);
       }
@@ -73,7 +74,9 @@ const LoginTwo = () => {
           setAccessToken(res.access);
           setRefreshToken(res.refresh);
           setUser(res.user);
-          navigate("/");
+          // navigate("/");
+          navigate("/blog/", { replace: true }); 
+
         } else {
           toast.error(res.error);
         }

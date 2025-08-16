@@ -162,7 +162,7 @@ const Login = () => {
         {/* Forgot password Link */}
         <div className="text-center mt-3">
           <p className="text-gray-600">
-            <Link to="/auth/forgotpassword" className="text-orange-500 hover:text-orange-600 text-sm">
+            <Link to="auth/forgotpassword" className="text-orange-500 hover:text-orange-600 text-sm">
             Forgot Password?
             </Link>
           </p>
@@ -172,7 +172,7 @@ const Login = () => {
         <div className="text-center ">
           <small className="text-gray-600">
             Don't have an account? 
-            <Link to="/auth/register" className="text-orange-500 hover:text-orange-600 ml-1 font-medium">
+            <Link to="auth/register" className="text-orange-500 hover:text-orange-600 ml-1 font-medium">
               Create an account
             </Link>
           </small>

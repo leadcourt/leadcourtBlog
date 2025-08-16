@@ -11,10 +11,10 @@ import ErrorPage from "../../components/ErrorPage";
 
 const RouterFile = createBrowserRouter([
   {
-    path: "/",
+    path: "/blog/", 
     element: <DefaultLayout />,
     errorElement: <ErrorPage />,
-    children: [ 
+    children: [
       {
         index: true,
         element: <Home2 />,
@@ -26,10 +26,10 @@ const RouterFile = createBrowserRouter([
     ],
   },
   {
-    path: "/",
+    path: "/blog/",
     element: <AdminLayout />,
     children: [
-      
+
       {
         path: "create-post",
         element: <CreatePost />,
@@ -41,7 +41,7 @@ const RouterFile = createBrowserRouter([
     ],
   },
   {
-    path: "/",
+    path: "/blog/",
     element: <AuthLayout />,
     children: [
       {

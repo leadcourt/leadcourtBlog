@@ -128,7 +128,7 @@ const CommentSection = ({ postId }) => {
             alt=""
           />
           <Link
-            to={"/dashboard?tab=profile"}
+            to={"dashboard?tab=profile"}
             className="text-cyan-600 hover:underline"
           >
             @{currentUser.username}
@@ -137,7 +137,7 @@ const CommentSection = ({ postId }) => {
       ) : (
         <div className="text-sm text-teal-500 my-5 flex gap-1">
           You must be signed in to comment.
-          <Link className="text-blue-500 hover:underline" to={"/sign-in"}>
+          <Link className="text-blue-500 hover:underline" to={"sign-in"}>
             Sign In
           </Link>
         </div>

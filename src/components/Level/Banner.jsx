@@ -23,7 +23,7 @@ const Banner = () => {
                 <h6 className="text-sm">{formatDate(postAtom?.[0][0]?.createdAt)} 
                   {/* • Updated 3 hours ago */}
                   </h6>
-                <Link to={`/post/${postAtom?.[0][0]?.slug}`} className="block text-xl font-semibold leading-tight hover:underline">
+                <Link to={`post/${postAtom?.[0][0]?.slug}`} className="block text-xl font-semibold leading-tight hover:underline">
                 {(postAtom?.[0][0]?.title)}
                 </Link>
                 <p className="text-sm">
@@ -44,7 +44,7 @@ const Banner = () => {
             >
               <div className="absolute bottom-2 left-2 text-white">
                 <h6 className="text-xs">{formatDate(postAtom?.[0][1]?.createdAt)}</h6>
-                <Link to={`/post/${postAtom?.[0][1]?.slug}`} className="block text-sm font-medium hover:underline">
+                <Link to={`post/${postAtom?.[0][1]?.slug}`} className="block text-sm font-medium hover:underline">
                 {(postAtom?.[0][1]?.title)}
                 </Link>
                 {/* <Link to="#" className="inline-block mt-1 px-2 p)y-0.5 bg-green-600 text-xs rounded">Finance</span> */}
@@ -59,7 +59,7 @@ const Banner = () => {
             >
               <div className="absolute bottom-2 left-2 text-white">
                 <h6 className="text-xs">{formatDate(postAtom?.[0][2]?.createdAt)}</h6>
-                <Link to={`/post/${postAtom?.[0][2]?.slug}`} className="block text-sm font-medium hover:underline">
+                <Link to={`post/${postAtom?.[0][2]?.slug}`} className="block text-sm font-medium hover:underline">
                 {(postAtom?.[0][2]?.title)}
                 </Link>
                 {/* <Link to="#" className="inline-block mt-1 px-2 p)y-0.5 bg-red-600 text-xs rounded">Business</span> */}

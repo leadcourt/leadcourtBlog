@@ -33,7 +33,7 @@ export default function AdminLayout() {
           <Footer />
         </div>
       ) : (
-        <Navigate to="/" />
+        <Navigate to="/" replace />
       )}
     </div>
   );
