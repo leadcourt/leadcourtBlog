@@ -7,7 +7,7 @@ const ErrorPage = () => {
   const navigate = useNavigate();
 
   const refreshPage = () => {
-    navigate(0); // React Router v6+ supports this to reload current route
+    navigate(0); 
   };
 
   useEffect(()=>{
@@ -23,7 +23,7 @@ const ErrorPage = () => {
       </p>
       <div className="flex gap-3 items-center ">
         <Link
-          to="/"
+          to="www.leadcourt.com"
           className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
         >
           Go to Home
