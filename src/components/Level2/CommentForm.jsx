@@ -1,4 +1,3 @@
-// components/CommentForm.jsx
 import React, { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { userState } from "../../utils/atom/authAtom";
@@ -76,7 +75,6 @@ const CommentForm = ( {postId, reloadComment} ) => {
             </div>
             <div>
               <button
-                // onClick={addComment}
                 type="submit"
                 className="flex items-center gap-3 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
               >

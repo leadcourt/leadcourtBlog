@@ -17,6 +17,10 @@ const getPostBySlug = async (postSlug) => {
     return axios.get(`${baseUrl}/post/getposts?slug=${postSlug}`)
 }
 
+const deletePostByID = async (postId) => {
+    return axios.get(`${baseUrl}/post/deletepost/${postId}`)
+}
+// /
 
 
 const getPostComment = async (postId) => {
@@ -33,6 +37,8 @@ export {
     addPost,
     getAllPost,
     getPostBySlug,
+
+    deletePostByID,
     getPostComment,
     addCommentToPost,
 }

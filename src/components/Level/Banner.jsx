@@ -2,11 +2,10 @@ import React from 'react';
 import { useRecoilState } from 'recoil';
 import { postState } from '../../utils/atom/postAtom';
 import formatDate from '../../utils/formatDate';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   const postAtom = useRecoilState(postState)
-  const navigate = useNavigate()
 
   return (
     <section className="bg-gray-50 border-b py-8">
@@ -16,22 +15,20 @@ const Banner = () => {
             <div
               className={`relative w-full h-64 bg-cover bg-center rounded-lg overflow-hidden bg-gray-700 bg-blend-multiply `}
               style={{ backgroundImage: `url(${postAtom?.[0][0]?.image})` }}
-              // bg-[url(${postAtom?.[0][0]?.image}]
             >
               
               <div className="absolute top-4 left-4 text-white space-y-2">
                 <h6 className="text-sm">{formatDate(postAtom?.[0][0]?.createdAt)} 
-                  {/* • Updated 3 hours ago */}
                   </h6>
                 <Link to={`post/${postAtom?.[0][0]?.slug}`} className="block text-xl font-semibold leading-tight hover:underline">
                 {(postAtom?.[0][0]?.title)}
-                </Link>
-                <p className="text-sm">
-                {(postAtom?.[0][0]?.content?.slice(0, 40))}...
-                </p>
-                {/* <Link to="#" className="inline-block mt-2 px-3 p)y-1 bg-blue-600 text-white text-xs rounded">
-                  Investing
-                </span> */}
+                </Link> 
+
+                
+                  <div
+                    className="blog-content"
+                    dangerouslySetInnerHTML={{ __html: postAtom?.[0][0]?.content?.slice(0, 50) }}
+                  /> 
               </div>
             </div>
           </div>

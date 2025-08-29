@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import formatDate from "../../utils/formatDate";
 
 
@@ -17,13 +17,13 @@ const PostContent = ({posts}) => {
           <div className="grid md:grid-cols-2 gap-6">
             {posts?.map((item, index)=>(
             <div key={item?._id} className="relative bg-gray-100 rounded overflow-hidden">
-              <span onClick={()=>navigate(`/post/${item?.slug}`)}>
+              <span onClick={()=>navigate(`post/${item?.slug}`)}>
                 <img src={item?.image} alt="" className="w-full h-48 object-cover" />
               </span>
               <div className="p-4">
-                <a href={(`/post/${item?.slug}`)}>
+                <Link to={(`post/${item?.slug}`)}>
                   {item?.title}
-                </a>
+                </Link>
                 <p className="text-xs text-gray-600">{formatDate(item?.createdAt)} | <strong className="hover:underline">{item?.userId}</strong></p>
               </div>
             </div>

@@ -33,7 +33,6 @@ export default function ResetPassword() {
         values.newPasswordAgain = '' 
       })
       .catch(( ) => {
-        // console.error("error occured", err);
       });
 
     setLoading(false);

@@ -23,7 +23,7 @@ const ErrorPage = () => {
       </p>
       <div className="flex gap-3 items-center ">
         <Link
-          to="www.leadcourt.com"
+          to="www.leadcourt.com/blog"
           className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
         >
           Go to Home

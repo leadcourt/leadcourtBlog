@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Key, LoaderCircle, Lock, Mail } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
-// import { FaLinkedinIn } from "react-icons/fa6";
 import { useFormik } from "formik";
 import { loginUserValidation } from "../../utils/validation/validation";
 import { Link, useNavigate } from "react-router-dom";
@@ -13,7 +12,6 @@ import {
   refreshTokenState,
   userState,
 } from "../../utils/atom/authAtom";
-// import logo from "/logo.png";
  
 
 const LoginTwo = () => {
@@ -29,7 +27,6 @@ const LoginTwo = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState({loading: false,auth: ''})
 
-  // Function for Email login
   const onSubmit = async (values) => {
     setLoading({
       loading: true,
@@ -46,7 +43,6 @@ const LoginTwo = () => {
         setUser(res.user);
 
           navigate("/blog/", { replace: true }); 
-        // navigate("/");
       } else {
         toast.error(res.error);
       }
@@ -74,7 +70,6 @@ const LoginTwo = () => {
           setAccessToken(res.access);
           setRefreshToken(res.refresh);
           setUser(res.user);
-          // navigate("/");
           navigate("/blog/", { replace: true }); 
 
         } else {
@@ -137,12 +132,7 @@ const LoginTwo = () => {
           }
             <span className=" text-gray-700">Log In with Google</span>
           </button>
-
-          {/* <button className="flex items-center justify-center w-full py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
-            <FaLinkedinIn className="p-1 text-xl bg-gray-700 text-white" />
-
-            <span className="ml-3 text-gray-700">Log In with LinkedIn</span>
-          </button> */}
+ 
         </div>
 
         {/* Or Divider */}
@@ -155,7 +145,6 @@ const LoginTwo = () => {
           </div>
         </div>
 
-        {/* <div className="primary-btn-red"></div> */}
         {useEmail ? (
           <div className="mb-">
             {/* Email Login */}

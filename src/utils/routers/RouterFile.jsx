@@ -7,7 +7,7 @@ import AdminLayout from "./layouts/AdminLayout";
 import CreatePost from "../../pages/CreatePost";
 import AuthLayout from "./layouts/AuthLayout ";
 import ErrorPage from "../../components/ErrorPage";
-// import UpdatePost from "../../pages/UpdatePost";
+import UpdatePost from "../../pages/UpdatePost";
 
 const RouterFile = createBrowserRouter([
   {
@@ -34,10 +34,10 @@ const RouterFile = createBrowserRouter([
         path: "create-post",
         element: <CreatePost />,
       },
-      // {
-      //   path: "update-post/:postId",
-      //   element: <UpdatePost />,
-      // },
+      {
+        path: "update-post/:postId",
+        element: <UpdatePost />,
+      },
     ],
   },
   {

@@ -146,7 +146,6 @@ const Login = () => {
           <button
                 type="submit"
                 disabled={!isValid || isSubmitting}
-                // onClick={handleSubmit}
                 className=" secondary-btn-red flex gap-3 items-center justify-center"
               >
                 {isSubmitting && isValid ? (

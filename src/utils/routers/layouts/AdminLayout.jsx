@@ -23,9 +23,7 @@ export default function AdminLayout() {
 
   return (
     <div>
-      <ScrollTop />
-      {/* <ScrollToTop /> */}
-      {/* {auth?.access && user.role.toLowerCase() === "admin" ? ( */}
+      <ScrollTop /> 
        {auth?.access && user?.id === import.meta.env.VITE_ADMIN_ACCESS ? (
          <div className="">
           <HeaderMain />
@@ -33,7 +31,7 @@ export default function AdminLayout() {
           <Footer />
         </div>
       ) : (
-        <Navigate to="/" replace />
+        <Navigate to="" replace />
       )}
     </div>
   );

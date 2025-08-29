@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoImg from '../../assets/logo/logo.png'; // Adjust the path as necessary
+import LogoImg from '../../assets/logo/logo.png';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-600">
-              <li><Link to={('https://blog.leadcourt.com/')} className="hover:text-primary-500">Blog</Link></li>
+              <li><Link to={('https://leadcourt.com/blog/')} className="hover:text-primary-500">Blog</Link></li>
             </ul>
           </div>
           <div>

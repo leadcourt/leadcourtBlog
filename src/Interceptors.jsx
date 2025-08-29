@@ -22,7 +22,7 @@ function Interceptors() {
     resetRefreshToken();
     resetUser();
     toast.success("Session Expired");
-    window.location.href = "/"; // Redirect to login page
+    window.location.href = "/";
   };
   const mytoken = useRecoilValue(attachToken);
 

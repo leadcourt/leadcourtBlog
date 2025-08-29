@@ -1,9 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { accessTokenState, refreshTokenState, userState } from "../../atom/authAtom";
-// import ScrollToTop from "../../../components/ScrollToTop";
 import HeaderMain from "../../../components/Level/HeaderMain";
-// import ConnectWithUs from "../../../components/Level/ConnectWithUs";
 import Footer from "../../../components/Level/Footer";
 import ScrollTop from "../../../components/Level/ScrollTop";
 
@@ -30,7 +28,7 @@ export default function AuthLayout () {
           <Footer />
         </div>
       ) : (
-        <Navigate to="/" />
+        <Navigate to="" replace />
       )}
     </div>
   );

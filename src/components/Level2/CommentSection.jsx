@@ -1,4 +1,3 @@
-// File: src/components/CommentSection.jsx
 export default function CommentSection() {
     return (
       <section className="bg-gray-100 text-gray-800 py-10">

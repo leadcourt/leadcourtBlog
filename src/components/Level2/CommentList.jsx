@@ -1,5 +1,4 @@
 
-// components/CommentList.jsx
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getPostComment } from '../../utils/api/post';
@@ -12,7 +11,6 @@ const CommentList = forwardRef(({ postId }, ref) => {
 
 const getComments = async () => {
   try {
-    // const res = 
     await getPostComment(postId).then((res)=>{
       const data = res?.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) || [];
 
@@ -32,29 +30,7 @@ useImperativeHandle(ref, () => ({
 useEffect(() => {
   getComments();
 }, []);
-
-
-// const CommentList = (postId) => {
-//   const avatar = "/images/avatar_user.webp" 
-  
-//   const [comments, setComments] = useState([])
-
-//   const getComments = async () => {
-
-//     await getPostComment(postId?.postId).then((res)=>{
-//       setComments(res?.data)
-      
-//     }).catch((err)=>{
-      
-//     })
-//   }
-  
-  
-//   useEffect(()=>{
-    
-//     getComments()
-    
-//   }, [])
+ 
 
   return (
     <div className="border-t border-gray-200 p-6">
@@ -63,11 +39,11 @@ useEffect(() => {
       {comments?.map((comment) => (
         <div 
           key={comment.id} 
-          className={`flex items-start mb-6 border pb-6 ${comment.isReply ? 'pl-8' : ''} ${comment.id !== comments.length ? 'border-b border-gray-200' : ''}`}
+          className={`flex items-start mb-6 border pl-3 pb-6 ${comment.isReply ? 'pl-8' : ''} ${comment.id !== comments.length ? 'border-b border-gray-200' : ''}`}
         >
-          <div className="flex flex-col items-center mr-6">
+          {/* <div className="flex flex-col items-center mr-6">
             <img src={avatar} alt="" className="w-16 h-16 rounded-full mb-2" />
-          </div>
+          </div> */}
           <div className='mt-1'>
             <h6 className="text-[11px] italic  text-gray-500 ">{formatDate(comment.updatedAt)}</h6>
             <Link className="text-blue-600 hover:underline">{comment.userName || 'Anonymous'}</Link>

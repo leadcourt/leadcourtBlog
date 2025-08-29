@@ -43,7 +43,6 @@ const CommentSection = ({ postId }) => {
     }
   };
 
-
   const getComments = async () => {
     try {
       const res = await fetch(`/api/comment/getPostComments/${postId}`);
@@ -51,15 +50,10 @@ const CommentSection = ({ postId }) => {
         const data = await res.json();
         setComments(data);
       }
-    } catch (error) {
-      // console.log(error.message);
-    }
+    } catch (error) {}
   };
   useEffect(() => {
-
-    console.log('postId', postId)
-
-    // getComments();
+    console.log("postId", postId);
   }, [postId]);
 
   const handleLike = async (commentId) => {
@@ -86,7 +80,6 @@ const CommentSection = ({ postId }) => {
         );
       }
     } catch (error) {
-      // console.log(error.message);
     }
   };
 
@@ -99,21 +92,20 @@ const CommentSection = ({ postId }) => {
   };
 
   const handleDelete = async (commentId) => {
-    setShowModal(false)   
+    setShowModal(false);
     try {
-      if(!currentUser){
-        navigate('/sign-in')
-        return
+      if (!currentUser) {
+        navigate("/sign-in");
+        return;
       }
       const res = await fetch(`/api/comment/deleteComment/${commentId}`, {
-        method: 'DELETE'
-      }) 
-      if(res.ok){
-        const data = await res.json()
-        setComments(comments.filter((comment)=>comment._id !== commentId))
+        method: "DELETE",
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setComments(comments.filter((comment) => comment._id !== commentId));
       }
     } catch (error) {
-      // console.log(error.message);
     }
   };
 
@@ -185,9 +177,9 @@ const CommentSection = ({ postId }) => {
               comment={comment}
               onLike={handleLike}
               onEdit={handleEdit}
-              onDelete={(commentId)=>{
-                setShowModal(true)
-                setCommentToDelete(commentId)
+              onDelete={(commentId) => {
+                setShowModal(true);
+                setCommentToDelete(commentId);
               }}
             />
           ))}
@@ -207,7 +199,10 @@ const CommentSection = ({ postId }) => {
               Are you sure you want to delete this comment?
             </h3>
             <div className="flex justify-between">
-              <Button color="failure" onClick={()=>handleDelete(commentToDelete)}>
+              <Button
+                color="failure"
+                onClick={() => handleDelete(commentToDelete)}
+              >
                 Yes, I'm sure
               </Button>
               <Button color="gray" onClick={() => setShowModal(false)}>
